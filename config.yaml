@@ -1,7 +1,6 @@
-name: 'Hello world'
-description: 'My first real add-on!'
+name: 'HA-Chrome-VNC'
 version: '1.0.0'
-slug: 'hello_world'
+slug: 'ha_chrome_vnc'
 init: false
 arch:
   - aarch64
@@ -9,3 +8,14 @@ arch:
   - armhf
   - armv7
   - i386
+startup: services
+codenotary: info@lklaus.ch
+description: Chrome Browser accesible with VNC on Port 5900/TCP
+ports:
+  5900/tcp: 5900
+ports_description:
+  5900/tcp: VNC Port (required)
+options:
+  CONFIG_LOCATION: '/config/addons_config/ha-chrome-vnc'
+map:
+  - config:rw
