@@ -1,0 +1,6 @@
+{
+	"name": "HA-Chrome-VNC",
+	"udev": true,
+	"url": "https://github.com/Lela810/HA-Chrome-VNC-Addon",
+	"maintainer": "Lela810"
+}
