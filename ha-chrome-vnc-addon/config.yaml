@@ -16,7 +16,7 @@ ports:
   5900/tcp: 5900
 ports_description:
   5900/tcp: VNC Port (required)
-options:
-  CONFIG_LOCATION: '/config/addons_config/ha-chrome-vnc'
+#options:
+#CONFIG_LOCATION: '/config/addons_config/ha-chrome-vnc'
 map:
   - config:rw
