@@ -1,5 +1,5 @@
 name: 'HA-Chrome-VNC'
-version: '1.0.0'
+version: '1.0.1'
 slug: 'ha_chrome_vnc'
 init: false
 arch:
