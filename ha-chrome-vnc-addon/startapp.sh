@@ -28,11 +28,8 @@ done
 set -e
 
 # Symbolic links for persistent storage on HA
-if [ ! -d "/data/profile" ]; then
-  mv /config/profile /data
-else
-  rm -rf /config/profile
-fi
+mkdir -p /config/profile
+mkdir -p /data/profile
 ln -s /data/profile /config/profile
 
 if [ ! -d "/share/firefox" ]; then
@@ -43,4 +40,4 @@ rm -rf /config/downloads
 ln -s /share/firefox /config/downloads
 
 /usr/bin/firefox --version
-exec /usr/bin/firefox "$@" >> /config/log/firefox/output.log 2>> /config/log/firefox/error.log
+exec /usr/bin/firefox "homeassistant.local.lklaus.ch" --kiosk >> /config/log/firefox/output.log 2>> /config/log/firefox/error.log
