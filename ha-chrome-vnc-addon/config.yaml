@@ -17,8 +17,10 @@ webui: http://[HOST]:[PORT:6080]/vnc.html?resize=downscale&autoconnect=1&passwor
 description: Firefox Browser accesible with VNC on Port 5900/TCP or NoVNC on Port 6080/TCP
 #image: 'lela810/ha-chrome-vnc-addon'
 ports:
+  5900/udp: 5900
   5900/tcp: 5900
   6080/tcp: 6080
+  6080/udp: 6080
 ports_description:
   5900/tcp: VNC Port (required)
   6080/tcp: NoVNC Port (optional)
