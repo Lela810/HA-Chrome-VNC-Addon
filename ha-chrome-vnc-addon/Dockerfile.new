@@ -1,6 +1,0 @@
-FROM jlesage/firefox:latest
-
-ENV USER_ID=0
-ENV KEEP_APP_RUNNING=1
-COPY startapp.sh /startapp.sh
-RUN chmod +x /startapp.sh
