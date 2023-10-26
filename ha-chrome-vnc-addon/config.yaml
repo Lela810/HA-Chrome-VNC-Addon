@@ -10,8 +10,12 @@ arch:
   - i386
 codenotary: info@lklaus.ch
 apparmor: false
-ingress: true
-ingress_port: 5900 5800
+ports:
+  5900/tcp: 5900
+  5800/tcp: 5800
+ports_description:
+  5900/tcp: VNC Port (required)
+  5800/tcp: Web Port (optional)
 image: registry.hub.docker.com/lela810/ha-chrome-vnc-addon
 webui: https://[HOST]:[PORT:5800]
 description: Firefox Browser accesible with VNC on Port 5900 or NoVNC on Port 1180
