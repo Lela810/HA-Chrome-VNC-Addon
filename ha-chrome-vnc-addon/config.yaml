@@ -1,5 +1,5 @@
 name: 'HA-Chrome-VNC'
-version: '1.0.28'
+version: '1.0.29'
 slug: 'ha_chrome_vnc'
 panel_icon: 'mdi:firefox'
 init: false
@@ -10,6 +10,10 @@ arch:
   - armv7
   - i386
 codenotary: info@lklaus.ch
+options:
+  Url: Google.ch
+schema:
+  Url: str
 apparmor: false
 ingress: true
 ingress_port: 5800
@@ -20,7 +24,6 @@ ports_description:
   5900/tcp: VNC Port (required)
   5800/tcp: Web Port (optional)
 image: registry.hub.docker.com/lela810/ha-chrome-vnc-addon
-webui: https://[HOST]:[PORT:5800]
 description: Firefox Browser accesible with VNC on Port 5900 or Web on Port 5800
 map:
   - share:rw
