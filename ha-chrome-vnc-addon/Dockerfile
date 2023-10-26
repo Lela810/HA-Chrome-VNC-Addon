@@ -1,8 +1,9 @@
-FROM desktopcontainers/base-alpine:a3.15.0
+FROM desktopcontainers/base-alpine:latest
 
 RUN apk update
 RUN apk upgrade
 RUN apk add chromium
+COPY haproxy.cfg /container/config/haproxy/haproxy.cfg
 #RUN apk add libxcvt
 ENV ENABLE_KIOSK=enable
 ENV ENABLE_SUDO=enable
