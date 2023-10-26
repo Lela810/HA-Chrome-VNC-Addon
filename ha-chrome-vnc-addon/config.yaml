@@ -18,10 +18,6 @@ privileged:
   - SYS_MODULE
   - SYS_ADMIN
   - NET_ADMIN
-environment:
-  - TZ=Europe/Zurich
-  - PGID=1000
-  - PUID=1000
 devices:
   - /dev/dri
 image: registry.hub.docker.com/lela810/ha-chrome-vnc-addon
