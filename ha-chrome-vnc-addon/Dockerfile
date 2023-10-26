@@ -4,12 +4,12 @@ RUN apk update
 RUN apk upgrade
 RUN apk add chromium
 COPY haproxy.cfg /container/config/haproxy/haproxy.cfg
-#RUN apk add libxcvt
+#RUN apk add install libegl1-mesa libegl1-mesa-dev mesa-common-dev libgles2-mesa libgles2-mesa-dev
 ENV ENABLE_KIOSK=enable
 ENV ENABLE_SUDO=enable
 ENV VNC_SCREEN_DEPTH=16
 ENV VNC_SCREEN_RESOLUTION=1024x768
-RUN echo "chromium-browser 'https://homeassistant.local.lklaus.ch' --kiosk --no-sandbox --start-fullscreen" >> /container/scripts/app
+RUN echo "chromium-browser 'https://homeassistant.local.lklaus.ch' --kiosk --no-sandbox --start-fullscreen --disable-gpu" >> /container/scripts/app
 #EXPOSE 5900
 #ENV DEBIAN_FRONTEND noninteractive
 
