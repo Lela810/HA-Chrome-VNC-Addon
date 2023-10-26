@@ -1,5 +1,14 @@
-FROM desktopcontainers/base-alpine:latest
+FROM desktopcontainers/base-alpine:latest-amd64
 
+RUN apk update
+RUN apk upgrade
+RUN apk add chromium
+#RUN apk add libxcvt
+ENV ENABLE_KIOSK=enable
+ENV ENABLE_SUDO=enable
+ENV VNC_SCREEN_DEPTH=16
+ENV VNC_SCREEN_RESOLUTION=1024x768
+RUN echo "chromium-browser 'https://homeassistant.local.lklaus.ch' --kiosk --no-sandbox --start-fullscreen" >> /container/scripts/app
 #EXPOSE 5900
 #ENV DEBIAN_FRONTEND noninteractive
 
@@ -22,9 +31,9 @@ FROM desktopcontainers/base-alpine:latest
 #RUN x11vnc -storepasswd 31Yxcvbnm /home/ubuntu/.vnc/passwd0
 #RUN chmod 777 /home/ubuntu/.vnc/passwd0
 
-#EXPOSE 5900 6080
+#EXPOSE 5900 4900
 
-#ENTRYPOINT ["/bin/bash"] 
+#ENTRYPOINT ["/bin/sh"] 
 #ENTRYPOINT ["firefox", "--kiosk homeassistant.local.lklaus.ch"]
 #CMD ["firefox" "--kiosk homeassistant.local.lklaus.ch"]
 #docker buildx build --platform linux/arm64 --tag lela810/ha-chrome-vnc-addon:latest --load .
