@@ -40,4 +40,4 @@ rm -rf /config/downloads
 ln -s /share/firefox /config/downloads
 
 /usr/bin/firefox --version
-exec /usr/bin/firefox '$(bashio::config 'Url')' --kiosk >> /config/log/firefox/output.log 2>> /config/log/firefox/error.log
+exec /usr/bin/firefox "$(bashio::config 'Url')" --kiosk >> /config/log/firefox/output.log 2>> /config/log/firefox/error.log
