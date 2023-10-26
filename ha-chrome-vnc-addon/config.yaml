@@ -10,10 +10,6 @@ arch:
   - armv7
   - i386
 codenotary: info@lklaus.ch
-options:
-  Url: Google.ch
-schema:
-  Url: str
 apparmor: false
 ingress: true
 ingress_port: 5800
