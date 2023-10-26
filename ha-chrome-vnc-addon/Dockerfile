@@ -1,4 +1,4 @@
-FROM kasmweb/desktop:latest
+FROM kasmweb/ubuntu-jammy-desktop:1.14.0-rolling
 
 #EXPOSE 5900
 #ENV DEBIAN_FRONTEND noninteractive
