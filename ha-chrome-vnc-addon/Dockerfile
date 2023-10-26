@@ -1,4 +1,4 @@
-FROM desktopcontainers/base-alpine:latest-amd64
+FROM desktopcontainers/base-alpine:latest-arm64v8
 
 RUN apk update
 RUN apk upgrade
