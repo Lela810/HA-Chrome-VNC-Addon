@@ -27,5 +27,5 @@ EXPOSE 5900 6080
 #ENTRYPOINT ["/bin/bash"] 
 #ENTRYPOINT ["firefox", "--kiosk homeassistant.local.lklaus.ch"]
 #CMD ["firefox" "--kiosk homeassistant.local.lklaus.ch"]
-#docker buildx build --platform linux/amd64,linux/arm64 --tag lela810/ha-chrome-vnc-addon:latest --load .
+#docker buildx build --platform linux/arm64 --tag lela810/ha-chrome-vnc-addon:latest --load .
 #docker buildx build --platform linux/amd64 --tag lela810/ha-chrome-vnc-addon:latest --load .
