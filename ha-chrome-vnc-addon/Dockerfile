@@ -1,4 +1,4 @@
-FROM desktopcontainers/base-alpine:latest-arm64v8
+FROM desktopcontainers/base-alpine:a3.15.0
 
 RUN apk update
 RUN apk upgrade
@@ -38,3 +38,4 @@ RUN echo "chromium-browser 'https://homeassistant.local.lklaus.ch' --kiosk --no-
 #CMD ["firefox" "--kiosk homeassistant.local.lklaus.ch"]
 #docker buildx build --platform linux/arm64 --tag lela810/ha-chrome-vnc-addon:latest --load .
 #docker buildx build --platform linux/amd64 --tag lela810/ha-chrome-vnc-addon:latest --load .
+#docker buildx build --platform linux/amd64,linux/arm64 --tag lela810/ha-chrome-vnc-addon:latest --push .
